@@ -1,0 +1,88 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: url(/images/bg.jpg);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background: rgba(249, 228, 1, .5);
+}
+
+section {
+  position: relative;
+  top: 50%;
+  top: calc(50% - 50px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
+  display: inline-block;
+  max-width: 90%;
+}
+
+section img {
+  max-width: 100%;
+}
+
+.social {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 760px) {
+  .social {
+    text-align: center;
+    left: 0;
+    margin: 10px 10px 20px;
+  }
+
+  .social li {
+    margin-left: 10px;
+  }
+}
+
+.social li {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  background: rgba(0, 0, 0, .5) no-repeat center center;
+  margin-left: 20px;
+  position: relative;
+  transition: background .3s;
+}
+
+.social li:first-child {
+  margin-left: 0;
+}
+
+.social li a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.social li.email  { background-image: url(/images/email_clear_icon.png) }
+.social li.vk     { background-image: url(/images/vk_clear_icon.png) }
+.social li.fb     { background-image: url(/images/fb_clear_icon.png) }
+.social li.tumblr { background-image: url(/images/tumblr_clear_icon.png) }
+
+@media screen and (min-width: 1080px) {
+  .social li.email:hover  { background-color: #1bce99 }
+  .social li.vk:hover     { background-color: #6996c7 }
+  .social li.fb:hover     { background-color: #496194 }
+  .social li.tumblr:hover { background-color: #6e84b4 }
+}
+
